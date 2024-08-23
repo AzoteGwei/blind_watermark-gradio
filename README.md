@@ -175,3 +175,11 @@ WaterMark(..., processes=None)
 
 - text_blind_watermark (Embed message into text): [https://github.com/guofei9987/text_blind_watermark](https://github.com/guofei9987/text_blind_watermark)  
 - HideInfo（hide as image, hide as sounds, hide as text）：[https://github.com/guofei9987/HideInfo](https://github.com/guofei9987/HideInfo)
+
+## 备忘
+
+[综合查看强度的工具](http://www.atoolbox.net/Tool.php?Id=1052)
+
+```bash
+sudo apt-get update && sudo apt-get install ffmpeg libsm6 libxext6  -y # GitHub Codespace 补全运行库
+```
