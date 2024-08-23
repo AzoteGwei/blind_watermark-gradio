@@ -100,6 +100,8 @@ class WaterMark:
         # 转化为指定格式：
         if mode == 'img':
             wm = 255 * wm.reshape(wm_shape[0], wm_shape[1])
+            if out_wm_name is None:
+                return wm
             cv2.imwrite(out_wm_name, wm)
         elif mode == 'str':
             byte = ''.join(str((i >= 0.5) * 1) for i in wm)
