@@ -1,10 +1,9 @@
-```yaml
+---
 title: Blind Watermark
 app_file: webui.py
 colorFrom: purple
 colorTo: gray
-```
-
+---
 
 # blind-watermark
 
