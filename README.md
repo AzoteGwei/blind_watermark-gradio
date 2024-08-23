@@ -1,6 +1,6 @@
 ---
 title: Blind Watermark
-emoji: {{emoji}}
+emoji: 🖼️
 colorFrom: purple
 colorTo: gray
 sdk: gradio
