@@ -13,8 +13,9 @@ pinned: false
 
 Blind watermark based on DWT-DCT-SVD.
 
+[Online Demo by Huggingface.co](https://huggingface.co/spaces/AzoteGwei/blind_watermark)
 
-[![PyPI](https://img.shields.io/pypi/v/blind_watermark)](https://pypi.org/project/blind_watermark/)
+<!---[![PyPI](https://img.shields.io/pypi/v/blind_watermark)](https://pypi.org/project/blind_watermark/)
 [![Build Status](https://travis-ci.com/guofei9987/blind_watermark.svg?branch=master)](https://travis-ci.com/guofei9987/blind_watermark)
 [![codecov](https://codecov.io/gh/guofei9987/blind_watermark/branch/master/graph/badge.svg)](https://codecov.io/gh/guofei9987/blind_watermark)
 [![License](https://img.shields.io/pypi/l/blind_watermark.svg)](https://github.com/guofei9987/blind_watermark/blob/master/LICENSE)
@@ -23,10 +24,17 @@ Blind watermark based on DWT-DCT-SVD.
 [![stars](https://img.shields.io/github/stars/guofei9987/blind_watermark.svg?style=social)](https://github.com/guofei9987/blind_watermark/)
 [![fork](https://img.shields.io/github/forks/guofei9987/blind_watermark?style=social)](https://github.com/guofei9987/blind_watermark/fork)
 [![Downloads](https://pepy.tech/badge/blind-watermark)](https://pepy.tech/project/blind-watermark)
-[![Discussions](https://img.shields.io/badge/discussions-green.svg)](https://github.com/guofei9987/blind_watermark/discussions)
+[![Discussions](https://img.shields.io/badge/discussions-green.svg)](https://github.com/guofei9987/blind_watermark/discussions)--->
 
+[Original Repo](https://github.com/guofei9987/blind_watermark)
 
-- **Documentation:** [https://BlindWatermark.github.io/blind_watermark/#/en/](https://BlindWatermark.github.io/blind_watermark/#/en/)
+[WebUI Repo](https://github.com/AzoteGwei/blind_watermark-gradio)
+
+**Huggingface.co also supports a Docker Image of this UI.**
+
+**The huggingface version has been forced syncing to this repo.**
+
+<!---- **Documentation:** [https://BlindWatermark.github.io/blind_watermark/#/en/](https://BlindWatermark.github.io/blind_watermark/#/en/)
 - **文档：** [https://BlindWatermark.github.io/blind_watermark/#/zh/](https://BlindWatermark.github.io/blind_watermark/#/zh/)  
 - **中文 readme** [README_cn.md](README_cn.md)
 - **Source code:** [https://github.com/guofei9987/blind_watermark](https://github.com/guofei9987/blind_watermark)
@@ -183,11 +191,11 @@ WaterMark(..., processes=None)
 
 - text_blind_watermark (Embed message into text): [https://github.com/guofei9987/text_blind_watermark](https://github.com/guofei9987/text_blind_watermark)  
 - HideInfo（hide as image, hide as sounds, hide as text）：[https://github.com/guofei9987/HideInfo](https://github.com/guofei9987/HideInfo)
+--->
+## Memo
 
-## 备忘
-
-[综合查看强度的工具](http://www.atoolbox.net/Tool.php?Id=1052)
+[Detect Image Tool](http://www.atoolbox.net/Tool.php?Id=1052)
 
 ```bash
-sudo apt-get update && sudo apt-get install ffmpeg libsm6 libxext6  -y # GitHub Codespace 补全运行库
+sudo apt-get update && sudo apt-get install ffmpeg libsm6 libxext6  -y # GitHub Codespace Runtime
 ```
