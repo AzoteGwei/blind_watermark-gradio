@@ -7,6 +7,7 @@ import hashlib
 import base64
 import math
 import binascii
+import cv2
 
 demo = gr.Blocks()
 
@@ -25,13 +26,14 @@ class BlindWatermarkUtil:
         bwm_context.read_img(img=img_in)
         bwm_context.read_wm(base64.b64decode(bit_in),mode='bit')
         return (str(len(bwm_context.wm_bit)),(np.rint(bwm_context.embed())).astype(int))
-    def add_wm_img(pwd_wm_in : str,pwd_wm_pc : str,pwd_img_in : str,pwd_img_pc : str,img_in,img_wm_in : str):
+    def add_wm_img(pwd_wm_in : str,pwd_wm_pc : str,pwd_img_in : str,pwd_img_pc : str,img_in,img_wm_in):
         pwd_wm = BlindWatermarkUtil.calc_pwd(pwd_wm_in,pwd_wm_pc)
         pwd_img = BlindWatermarkUtil.calc_pwd(pwd_img_in,pwd_img_pc)
         bwm_context = blind_watermark.WaterMark(password_wm=pwd_wm,password_img=pwd_img)
         bwm_context.read_img(img=img_in)
         bwm_context.read_wm(img_wm_in,mode='img')
-        return (','.join(bwm_context.wm_bit.shape[0:2]),(np.rint(bwm_context.embed())).astype(int))
+        wm = cv2.imread(filename=img_wm_in, flags=cv2.IMREAD_GRAYSCALE)
+        return (str(wm.shape[0])+','+str(wm.shape[1]),(np.rint(bwm_context.embed())).astype(int))
     
     def read_wm_text(pwd_wm_in : str,pwd_wm_pc : str,pwd_img_in : str,pwd_img_pc : str,img_in,bitlen : str):
         pwd_wm = BlindWatermarkUtil.calc_pwd(pwd_wm_in,pwd_wm_pc)
@@ -165,7 +167,7 @@ with demo:
                         bit_wm_button = gr.Button(i18n.getTranslation("process"))
                 with gr.TabItem(i18n.getTranslation('img_wm')):
                     with gr.Row():
-                        img_wm_input = gr.Image(label=i18n.getTranslation("content"),type="filepath")
+                        img_wm_input = gr.Image(label=i18n.getTranslation("content"),type='filepath')
                         img_wm_button = gr.Button(i18n.getTranslation("process"))
             bitlen_output = gr.Textbox(label=i18n.getTranslation("wm_bitlen"))
             image_output = gr.Image(label=i18n.getTranslation("result"))
